@@ -5,3 +5,4 @@ jdk:
 
 notifications:
   slack: buildresponse:Rs13meHG1yiRI8DiMHuMWOkZ
+  template: '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
