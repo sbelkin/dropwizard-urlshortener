@@ -1,6 +1,6 @@
-package com.example.helloworld.auth;
+package com.example.shortener.auth;
 
-import com.example.helloworld.core.User;
+import com.example.shortener.core.User;
 import io.dropwizard.auth.Authorizer;
 
 public class ExampleAuthorizer implements Authorizer<User> {

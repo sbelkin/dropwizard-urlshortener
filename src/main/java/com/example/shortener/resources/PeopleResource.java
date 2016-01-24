@@ -1,7 +1,7 @@
-package com.example.helloworld.resources;
+package com.example.shortener.resources;
 
-import com.example.helloworld.core.Person;
-import com.example.helloworld.db.PersonDAO;
+import com.example.shortener.core.Person;
+import com.example.shortener.db.PersonDAO;
 import io.dropwizard.hibernate.UnitOfWork;
 
 import javax.ws.rs.GET;

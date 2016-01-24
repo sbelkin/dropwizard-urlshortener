@@ -16,5 +16,14 @@
             </column>
             <column name="jobTitle" type="varchar(255)"/>
         </createTable>
+        <createTable tableName="url">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="timestamp" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="urlTarget" type="varchar(255)"/>
+        </createTable>
     </changeSet>
 </databaseChangeLog>

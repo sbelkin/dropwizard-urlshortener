@@ -1,6 +1,6 @@
-package com.example.helloworld.resources;
+package com.example.shortener.resources;
 
-import com.example.helloworld.core.User;
+import com.example.shortener.core.User;
 import io.dropwizard.auth.Auth;
 
 import javax.annotation.security.PermitAll;

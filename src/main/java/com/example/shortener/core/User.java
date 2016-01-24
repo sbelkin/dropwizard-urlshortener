@@ -1,4 +1,4 @@
-package com.example.helloworld.core;
+package com.example.shortener.core;
 
 import java.security.Principal;
 

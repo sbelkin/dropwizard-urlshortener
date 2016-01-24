@@ -6,7 +6,7 @@
     </prerequisites>
 
     <artifactId>dropwizard-urlshortener</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <groupId>io.dropwizard</groupId>
     <name>Dropwizard Url Shortener Application</name>
 
@@ -38,7 +38,7 @@
             <dependency>
                 <groupId>io.dropwizard</groupId>
                 <artifactId>dropwizard-bom</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -46,6 +46,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.37</version>
+        </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
@@ -242,7 +247,7 @@
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>com.example.helloworld.HelloWorldApplication</mainClass>
+                            <mainClass>com.example.shortener.UrlShortenerApplication</mainClass>
                         </transformer>
                     </transformers>
                 </configuration>

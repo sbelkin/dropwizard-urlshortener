@@ -1,8 +1,6 @@
-package com.example.helloworld;
+package com.example.shortener;
 
-import com.example.helloworld.core.Template;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.common.collect.ImmutableMap;
 import io.dropwizard.Configuration;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.metrics.graphite.GraphiteReporterFactory;
@@ -13,7 +11,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Collections;
 import java.util.Map;
 
-public class HelloWorldConfiguration extends Configuration {
+public class UrlShortenerConfiguration extends Configuration {
     @NotEmpty
     private String template;
 
@@ -50,9 +48,6 @@ public class HelloWorldConfiguration extends Configuration {
         this.defaultName = defaultName;
     }
 
-    public Template buildTemplate() {
-        return new Template(template, defaultName);
-    }
 
     @JsonProperty("database")
     public DataSourceFactory getDataSourceFactory() {
@@ -64,19 +59,6 @@ public class HelloWorldConfiguration extends Configuration {
         this.database = dataSourceFactory;
     }
 
-    @JsonProperty("viewRendererConfiguration")
-    public Map<String, Map<String, String>> getViewRendererConfiguration() {
-        return viewRendererConfiguration;
-    }
-
-    @JsonProperty("viewRendererConfiguration")
-    public void setViewRendererConfiguration(Map<String, Map<String, String>> viewRendererConfiguration) {
-        final ImmutableMap.Builder<String, Map<String, String>> builder = ImmutableMap.builder();
-        for (Map.Entry<String, Map<String, String>> entry : viewRendererConfiguration.entrySet()) {
-            builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
-        }
-        this.viewRendererConfiguration = builder.build();
-    }
 
     @JsonProperty("metrics")
     public GraphiteReporterFactory getGraphiteReporterFactory() {
