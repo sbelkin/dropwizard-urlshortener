@@ -1,3 +1,5 @@
+![build](https://travis-ci.org/sbelkin/dropwizard-urlshortener.svg?branch=master)
+
 # Introduction
 
 The Dropwizard example application was developed to, as its name implies, provide examples of some of the features
